@@ -17,7 +17,11 @@
       "Bash(node -e ' *)",
       "Bash(lsof -ti:5173)",
       "WebSearch",
-      "WebFetch(domain:www.iloveimg.com)"
+      "WebFetch(domain:www.iloveimg.com)",
+      "Bash(gh auth *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git remote *)",
+      "Bash(git push *)"
     ]
   }
 }
