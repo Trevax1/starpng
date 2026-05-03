@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx serve *)",
+      "Bash(grep -oP '.{0,80}Made with.{0,80}' \"/Users/trevaxicon/Downloads/StarPNG 2/assets/index-CWZJLaMZ.js\")",
+      "Bash(grep -o '.............................................l\\\\.jsxs\\(\"p\",{className:\"flex items-center gap-1\",children:\\\\[\"Made with[^]]*\\\\]}' \"/Users/trevaxicon/Downloads/StarPNG 2/assets/index-CWZJLaMZ.js\")",
+      "Bash(python3 -c ' *)",
+      "WebFetch(domain:dribbble.com)",
+      "Bash(grep -o '\"[A-Z][a-zA-Z ]\\\\{10,40\\\\}\"' \"/Users/trevaxicon/Downloads/StarPNG 2/assets/index-CWZJLaMZ.js\")",
+      "Bash(curl -s \"https://dribbble.com/shots/27136436-SEO-Marketing-Platform-Landing-Page-UI-Design\")",
+      "Bash(curl -sL \"https://dribbble.com/shots/27136436-SEO-Marketing-Platform-Landing-Page-UI-Design\" -I)",
+      "Bash(curl -sL \"https://dribbble.com/shots/27136436-SEO-Marketing-Platform-Landing-Page-UI-Design\" -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\" -H \"Accept-Language: en-US,en;q=0.5\" -H \"Accept-Encoding: gzip, deflate\")",
+      "Bash(grep -o 'children:\\\\[l\\\\.jsx\\(Re,{to:\"[^\"]*\"' \"/Users/trevaxicon/Downloads/StarPNG 2/assets/index-CWZJLaMZ.js\")",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npx vite *)",
+      "Bash(node -e ' *)",
+      "Bash(lsof -ti:5173)",
+      "WebSearch",
+      "WebFetch(domain:www.iloveimg.com)"
+    ]
+  }
+}

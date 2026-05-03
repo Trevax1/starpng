@@ -1,0 +1,205 @@
+/* =============================================
+   StarPNG — Premium UI Override
+   Injected on top of compiled bundle.
+   Does NOT modify JS bundle — safe to update.
+   ============================================= */
+
+/* ── 1. Design Token Refresh ───────────────── */
+:root {
+  --background:         248 22% 97%;
+  --foreground:         240 30%  8%;
+  --card:               0   0% 100%;
+  --card-foreground:    240 30%  8%;
+  --primary:            248 75% 55%;
+  --primary-foreground: 0   0% 100%;
+  --secondary:          248 20% 94%;
+  --secondary-foreground: 240 30% 8%;
+  --muted:              248 18% 96%;
+  --muted-foreground:   240 12% 42%;
+  --accent:             248 20% 94%;
+  --accent-foreground:  240 30%  8%;
+  --border:             248 18% 88%;
+  --input:              248 18% 88%;
+  --ring:               248 75% 55%;
+  --radius:             1rem;
+}
+
+/* ── 2. Base Typography ─────────────────────── */
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.011em;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.font-display, h1, h2, h3, h4 {
+  font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+h1 { line-height: 1.05; letter-spacing: -0.04em; }
+h2 { line-height: 1.12; letter-spacing: -0.03em; }
+h3 { line-height: 1.25; letter-spacing: -0.02em; }
+
+/* ── 3. Navbar (glass-strong) ───────────────── */
+.glass-strong {
+  background: rgba(250, 249, 255, 0.84) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(100, 80, 220, 0.08) !important;
+  box-shadow:
+    0 1px 0 0 rgba(100, 80, 220, 0.05),
+    0 4px 20px -4px rgba(80, 60, 200, 0.08) !important;
+}
+
+/* ── 4. Gradient Utilities ──────────────────── */
+.gradient-hero {
+  background: linear-gradient(135deg, hsl(248,75%,57%) 0%, hsl(280,70%,60%) 100%) !important;
+}
+
+.gradient-hero-text {
+  background: linear-gradient(135deg, hsl(248,75%,55%) 0%, hsl(288,68%,58%) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* ── 5. Primary Buttons ─────────────────────── */
+.bg-primary {
+  background: linear-gradient(135deg, hsl(248,75%,57%) 0%, hsl(272,72%,58%) 100%) !important;
+  box-shadow: 0 4px 14px 0 rgba(100, 80, 220, 0.30) !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.bg-primary:hover {
+  box-shadow: 0 6px 22px 0 rgba(100, 80, 220, 0.42) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* ── 6. Icon wrappers with primary bg ───────── */
+.bg-primary\/10 {
+  background: rgba(100, 80, 220, 0.09) !important;
+}
+
+/* ── 7. Cards ───────────────────────────────── */
+.bg-card {
+  background: hsl(var(--card)) !important;
+}
+
+/* Tool cards and feature cards */
+[class*="rounded-2xl"][class*="border"] {
+  border-color: rgba(100, 80, 220, 0.10) !important;
+  box-shadow:
+    0 2px 8px -2px rgba(80, 60, 200, 0.06),
+    0 1px 3px -1px rgba(80, 60, 200, 0.04) !important;
+  transition: box-shadow 0.28s ease, transform 0.28s ease, border-color 0.28s ease !important;
+}
+
+[class*="rounded-2xl"][class*="border"]:hover {
+  box-shadow:
+    0 22px 44px -8px rgba(80, 60, 200, 0.16),
+    0 4px 12px -2px rgba(80, 60, 200, 0.09) !important;
+  border-color: rgba(100, 80, 220, 0.22) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ── 8. Outline / Ghost Buttons ─────────────── */
+.border-input,
+[class*="border-primary\/"] {
+  border-color: rgba(100, 80, 220, 0.18) !important;
+}
+
+/* ── 9. Inputs & Textareas ──────────────────── */
+input, textarea, select {
+  border-color: rgba(100, 80, 220, 0.16) !important;
+  border-radius: calc(var(--radius) - 0.25rem) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none !important;
+  border-color: hsl(var(--primary)) !important;
+  box-shadow: 0 0 0 3px rgba(100, 80, 220, 0.12) !important;
+}
+
+/* ── 10. Pill Badges ────────────────────────── */
+[class*="rounded-full"][class*="bg-primary"] {
+  background: rgba(100, 80, 220, 0.10) !important;
+  color: hsl(248, 72%, 52%) !important;
+  border: 1px solid rgba(100, 80, 220, 0.14) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* ── 11. Muted text colour ──────────────────── */
+.text-muted-foreground {
+  color: hsl(240, 12%, 44%) !important;
+}
+
+/* ── 12. Section glow backgrounds ───────────── */
+.bg-primary\/\[0\.02\] {
+  background: hsla(248, 22%, 97%, 1) !important;
+  background-image: radial-gradient(
+    ellipse 70% 50% at 50% 0%,
+    rgba(100, 80, 220, 0.05) 0%,
+    transparent 70%
+  ) !important;
+}
+
+/* ── 13. Borders ────────────────────────────── */
+.border-t { border-top-color: rgba(100, 80, 220, 0.08) !important; }
+.border-b { border-bottom-color: rgba(100, 80, 220, 0.08) !important; }
+.border-primary\/10 { border-color: rgba(100, 80, 220, 0.10) !important; }
+.border-border { border-color: rgba(100, 80, 220, 0.10) !important; }
+
+/* ── 14. Footer ─────────────────────────────── */
+footer {
+  background: hsl(248, 22%, 97%) !important;
+  background-image: radial-gradient(
+    ellipse 60% 40% at 50% 100%,
+    rgba(100, 80, 220, 0.04) 0%,
+    transparent 70%
+  ) !important;
+  border-top: 1px solid rgba(100, 80, 220, 0.08) !important;
+}
+
+/* ── 15. Glow animation refinement ──────────── */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50%       { opacity: 0.80; transform: scale(1.06); }
+}
+
+/* ── 16. Scrollbar ──────────────────────────── */
+::-webkit-scrollbar       { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: hsl(248, 22%, 97%); }
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 80, 220, 0.22);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(100, 80, 220, 0.38); }
+
+/* ── 17. Text selection ─────────────────────── */
+::selection {
+  background: rgba(100, 80, 220, 0.14);
+  color: hsl(248, 72%, 40%);
+}
+
+/* ── 18. Focus-visible ring ─────────────────── */
+:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+}
+
+/* ── 19. Smooth page transitions ────────────── */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a { transition: color 0.15s ease, opacity 0.15s ease; }
+a:hover { opacity: 0.82; }
+
+/* ── 20. Ring color ─────────────────────────── */
+.ring-ring { --tw-ring-color: hsl(var(--primary) / 0.4); }
